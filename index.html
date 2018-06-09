@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Application Id Form</title>
+   
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <h3>Employee Id card form</h3>
+    <form novalidate>
+        <div class="input-group">
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" required><br>
+            <span class="span-for-errors" id="errorfirstname">Please enter your preferred First name</span>
+        </div><br>
+        <div class="input-group">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" required><br>
+            <span class="span-for-errors" id="errorfullname">Please enter your Full name</span> 
+        </div><br>
+        <div class="input-group">
+             <label for="designation">Designation:</label>
+             <select id="designation" required>
+                <option value="default">Default</option>
+                <option value="manager">Manager</option>
+                <option value="seniorsoftwareengineer">Senior Software Engineer</option>
+                <option value="softwareengineer">Software Engineer</option>
+                <option value="associatesoftwareengineer">Associate Software Engineer</option>
+              </select>
+              <br>
+              <span class="span-for-errors" id="errordesignation">Please enter your Designation</span>
+        </div><br>
+        <div class="input-group">
+            <label for="employeecode">Employee code:</label>
+            <input type="text" id="employeecode" required>
+            <br>
+            <span class="span-for-errors" id="erroremployeecode">Please enter your Employee Code</span>
+        </div><br>
+        <div class="input-group">
+            <label for="bloodgroup">Blood Group:</label>
+            <input type="text" id="bloodgroup" required>
+            <br>
+            <span class="span-for-errors" id="errorbloodgroup">Please enter your Blood Group</span>
+        </div><br>
+        <p>
+            <label for="reasonsforissue">Reasons for Issue:</label>
+            <input type = "radio" id = "newemployee" value="New Employee" name="reasonsforissue"/>
+            <label for="newemployee">New Employee</label>
+            <input type = "radio" id = "lost" value="Lost" name="reasonsforissue" />
+            <label for="lost">Lost</label>
+            <input type = "radio" id = "defaced" value="Defaced" name="reasonsforissue"/>
+            <label for="defaced">Defaced</label>
+            <input type = "radio" id = "conversion" value="Conversion" name="reasonsforissue"/>
+            <label for="conversion">Conversion</label>
+            <input type = "radio" id = "designationchange" value="Designation change" name="reasonsforissue"/>
+            <label for="designationchange">Designation change</label>
+        </p>
+        <span class="span-for-errors" id="errorreasonsforissue">Please enter your Reasons for Issue:</span>        
+        <div class="input-group">
+            <label for="dateofemployment">Date of Employment:</label>
+            <input type="date" id="dateofemployment" required><br>
+	    <span class="span-for-errors" id="errordateofemployment">Please enter your Date of Employment</span>
+        </div><br>
+        <div class="input-group">
+            <label for="emailid">Email-id:</label>
+            <input type="text" id="emailid" placeholder="Primary email address" required><br>
+            <span class="span-for-errors" id="erroremailid">Please enter your Email-id</span>
+        </div><br>
+        <div class="input-group">
+            <label for="employeeContactNumber">Employee Contact Number:</label>
+            <input type="text" id="employeeContactNumber" onkeypress="return phoneno(event)" minlength="10" maxlength="10" required><br>
+            <span class="span-for-errors" id="erroremployeeContactNumber">Please enter your Employee Contact Number</span>
+        </div><br>
+        <div class="input-group">
+            <label for="emergencycontactnumber">Emergency Contact Number:</label>
+            <input type="text" id="emergencycontactnumber"onkeypress="return phoneno(event)" minlength="10" maxlength="10" required><br>
+            <span class="span-for-errors" id="erroremergencycontactnumber">Please enter your Emergency Contact Number</span>
+        </div><br>
+         <button type="button" onclick="addDetails()">Add details</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
